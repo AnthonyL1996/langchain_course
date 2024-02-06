@@ -10,19 +10,19 @@ load_dotenv()
 
 chat = ChatOpenAI()
 
-memory = ConversationSummaryMemory(
-    # chat_memory=FileChatMessageHistory("messages.json"),
-    memory_key="messages",
-    return_messages=True,
-    llm=chat
-)
-
 prompt = ChatPromptTemplate(
     input_variables=["content", "messages"],
     messages=[
         MessagesPlaceholder(variable_name="messages"),
         HumanMessagePromptTemplate.from_template("{content}")
     ]
+)
+
+memory = ConversationSummaryMemory(
+    # chat_memory=FileChatMessageHistory("messages.json"),
+    memory_key="messages",
+    return_messages=True,
+    llm=chat
 )
 
 chain = LLMChain(
