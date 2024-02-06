@@ -7,6 +7,7 @@ from langchain_community.embeddings import OpenAIEmbeddings
 from langchain_core.callbacks import Callbacks
 from langchain_core.documents import Document
 
+
 class RedundantFilterRetriever(BaseRetriever):
     embeddings: Embeddings
     chroma: Chroma
@@ -23,7 +24,4 @@ class RedundantFilterRetriever(BaseRetriever):
         )
 
     async def aget_relevant_documents(self):
-
-
-
         return []
