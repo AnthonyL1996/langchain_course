@@ -17,17 +17,23 @@ text_splitter = CharacterTextSplitter(
 
 )
 
-loader = TextLoader("facts.txt")
-docs = loader.load_and_split(
-    text_splitter=text_splitter
-)
+# Uncomment to load DB
+# loader = TextLoader("facts.txt")
+# docs = loader.load_and_split(
+#     text_splitter=text_splitter
+# )
 
 # Already reaches out to OpenAI to calculate the embeddings
 # Every time you run this you will add duplicate data
-db = Chroma.from_documents(
-    docs,
-    embedding=embeddings,
-    persist_directory="emb"
+# db = Chroma.from_documents(
+#      docs,
+#     embedding=embeddings,
+#     persist_directory="emb"
+# )
+
+db = Chroma(
+    persist_directory="emb",
+    embedding_function=embeddings,
 )
 
 results = db.similarity_search_with_score(
