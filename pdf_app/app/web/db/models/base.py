@@ -1,6 +1,6 @@
 from typing import TypeVar, Optional, Type, List
 from abc import abstractmethod
-from pdf_app.app.web.db import db
+from app.web.db import db
 
 T = TypeVar("T", bound="BaseModel")
 

@@ -1,7 +1,7 @@
 import os
 import pinecone
 from langchain.vectorstores import Pinecone
-from pdf_app.app.chat.embeddings.openai import embeddings
+from app.chat.embeddings.openai import embeddings
 
 pinecone.init(
     api_key=os.getenv("PINECONE_API_KEY"),

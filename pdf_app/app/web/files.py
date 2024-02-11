@@ -3,7 +3,7 @@ import os
 import requests
 import tempfile
 from typing import Tuple, Dict, Any
-from pdf_app.app.web.config import Config
+from app.web.config import Config
 
 upload_url = f"{Config.UPLOAD_URL}/upload"
 

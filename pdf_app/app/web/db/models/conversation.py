@@ -1,5 +1,5 @@
 import uuid
-from pdf_app.app.web.db import db
+from app.web.db import db
 from .base import BaseModel
 
 

@@ -1,4 +1,4 @@
-from pdf_app.app.chat.models import ChatArgs
+from app.chat.models import ChatArgs
 
 
 def build_chat(chat_args: ChatArgs):

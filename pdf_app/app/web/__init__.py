@@ -1,12 +1,12 @@
 from flask import Flask
 from flask_cors import CORS
 
-from pdf_app.app.web.db import db, init_db_command
-from pdf_app.app.web.db import models
-from pdf_app.app.celery import celery_init_app
-from pdf_app.app.web.config import Config
-from pdf_app.app.web.hooks import load_logged_in_user, handle_error, add_headers
-from pdf_app.app.web.views import (
+from app.web.db import db, init_db_command
+from app.web.db import models
+from app.celery import celery_init_app
+from app.web.config import Config
+from app.web.hooks import load_logged_in_user, handle_error, add_headers
+from app.web.views import (
     auth_views,
     pdf_views,
     score_views,

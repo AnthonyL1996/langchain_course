@@ -1,8 +1,8 @@
 from typing import Dict
 from langchain.schema.messages import AIMessage, HumanMessage, SystemMessage
-from pdf_app.app.web.db import db
-from pdf_app.app.web.db.models import Message
-from pdf_app.app.web.db.models.conversation import Conversation
+from app.web.db import db
+from app.web.db.models import Message
+from app.web.db.models.conversation import Conversation
 
 
 def get_messages_by_conversation_id(
