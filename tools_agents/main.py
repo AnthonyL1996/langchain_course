@@ -54,6 +54,5 @@ agent_executor = AgentExecutor(
 
 # agent_executor("How many users have provided a shipping address?")
 # agent_executor("how many users are there?")
-agent_executor("Summarize the top 5 most popular products i. Write the results to a report file.")
-agent_executor("Do the same for users")
+agent_executor("Summarize the top 5 most popular products in quantity sold. Each with their number of items sold, price and total revenue contribution. Write the results to a report file using bootstrap and add a pie diagram showing the distribution of revenue.")
 

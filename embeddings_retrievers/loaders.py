@@ -23,6 +23,7 @@ text_splitter = CharacterTextSplitter(
 #     text_splitter=text_splitter
 # )
 
+# Uncomment to load DB
 # Already reaches out to OpenAI to calculate the embeddings
 # Every time you run this you will add duplicate data
 # db = Chroma.from_documents(
@@ -31,6 +32,7 @@ text_splitter = CharacterTextSplitter(
 #     persist_directory="emb"
 # )
 
+# Uncomment this to run multiple times
 db = Chroma(
     persist_directory="emb",
     embedding_function=embeddings,

@@ -41,7 +41,7 @@ code_prompt = PromptTemplate(
 )
 
 test_prompt = PromptTemplate(
-    template="Write a test for the following {language} code: \n{code}",
+    template="Write a unit test for the following {language} code: \n{code}",
     input_variables=["language", "code"]
 )
 
